@@ -113,9 +113,9 @@ public class Calculadora extends JFrame {
 		btnAb.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					if (Double.parseDouble(textField_1.getText())==0) { throw new ExcepcionNoDivisibleEntre0();}
 					textField_2.setText(String.valueOf(op.division(textField.getText(), textField_1.getText())));
-				}catch(InputMismatchException ex) {
+					if (Double.parseDouble(textField_1.getText())==0) { throw new ExcepcionNoDivisibleEntre0();}
+				}catch(NumberFormatException ex) {
 					JOptionPane.showMessageDialog(null, "Introducir valores que se puedan dividir");
 				}catch(ExcepcionNoDivisibleEntre0 ex1) {
 					JOptionPane.showMessageDialog(null, "No se puede dividir entre 0");

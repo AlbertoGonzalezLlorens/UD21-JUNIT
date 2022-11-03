@@ -2,7 +2,7 @@ package Ud21.Calculadora;
 
 public class Operaciones {
 	
-	public Operaciones() {
+	public Operaciones() { 
 		
 	}
 	
